@@ -19,6 +19,8 @@
 		FF5775B52B6CD3B5002CCA8B /* NewInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775B42B6CD3B5002CCA8B /* NewInfoProtocol.swift */; };
 		FF5775B82B6CE78B002CCA8B /* BirthdaysList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF5775B62B6CE78B002CCA8B /* BirthdaysList.xcdatamodeld */; };
 		FF5775BB2B6CE93B002CCA8B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775BA2B6CE93B002CCA8B /* CoreDataManager.swift */; };
+		FF5775BD2B6D1727002CCA8B /* CastomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775BC2B6D1727002CCA8B /* CastomTableViewCell.swift */; };
+		FF5775C02B6D186C002CCA8B /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775BF2B6D186C002CCA8B /* Extension + UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		FF5775B42B6CD3B5002CCA8B /* NewInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoProtocol.swift; sourceTree = "<group>"; };
 		FF5775B72B6CE78B002CCA8B /* BirthdaysList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirthdaysList.xcdatamodel; sourceTree = "<group>"; };
 		FF5775BA2B6CE93B002CCA8B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		FF5775BC2B6D1727002CCA8B /* CastomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastomTableViewCell.swift; sourceTree = "<group>"; };
+		FF5775BF2B6D186C002CCA8B /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		FF57758F2B6CCE57002CCA8B /* BirthdaysList */ = {
 			isa = PBXGroup;
 			children = (
+				FF5775BE2B6D184A002CCA8B /* Extensions */,
 				FF5775B92B6CE920002CCA8B /* CoreDateManager */,
 				FF5775A42B6CD271002CCA8B /* MainView */,
 				FF5775AB2B6CD2D9002CCA8B /* NewInfoView */,
@@ -87,6 +92,7 @@
 				FF5775A52B6CD29E002CCA8B /* BrithdaysListView.swift */,
 				FF5775A72B6CD2BC002CCA8B /* BrithdaysListPresenter.swift */,
 				FF5775B22B6CD3A5002CCA8B /* BrithdaysListProtocol.swift */,
+				FF5775BC2B6D1727002CCA8B /* CastomTableViewCell.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -107,6 +113,14 @@
 				FF5775BA2B6CE93B002CCA8B /* CoreDataManager.swift */,
 			);
 			path = CoreDateManager;
+			sourceTree = "<group>";
+		};
+		FF5775BE2B6D184A002CCA8B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF5775BF2B6D186C002CCA8B /* Extension + UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,11 +195,13 @@
 			files = (
 				FF5775B82B6CE78B002CCA8B /* BirthdaysList.xcdatamodeld in Sources */,
 				FF5775912B6CCE57002CCA8B /* AppDelegate.swift in Sources */,
+				FF5775BD2B6D1727002CCA8B /* CastomTableViewCell.swift in Sources */,
 				FF5775A82B6CD2BC002CCA8B /* BrithdaysListPresenter.swift in Sources */,
 				FF5775AF2B6CD30F002CCA8B /* NewInfoPresenter.swift in Sources */,
 				FF5775A62B6CD29E002CCA8B /* BrithdaysListView.swift in Sources */,
 				FF5775BB2B6CE93B002CCA8B /* CoreDataManager.swift in Sources */,
 				FF5775B32B6CD3A6002CCA8B /* BrithdaysListProtocol.swift in Sources */,
+				FF5775C02B6D186C002CCA8B /* Extension + UIView.swift in Sources */,
 				FF5775932B6CCE57002CCA8B /* SceneDelegate.swift in Sources */,
 				FF5775B52B6CD3B5002CCA8B /* NewInfoProtocol.swift in Sources */,
 				FF5775AD2B6CD2FD002CCA8B /* NewInfoView.swift in Sources */,

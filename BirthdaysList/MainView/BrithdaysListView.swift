@@ -21,6 +21,9 @@ final class DefaultBrithdaysListView: UIViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.register(CastomTableViewCell.self, forCellReuseIdentifier: "CastomTableViewCell")
+    
     }
     
     //MARK: - constreints
@@ -50,12 +53,14 @@ extension DefaultBrithdaysListView: BrithdaysListView {
 }
 extension DefaultBrithdaysListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "CastomTableViewCell", for: indexPath) as? CastomTableViewCell {
+            
+            return cell
+        }
+        return UITableViewCell()
     }
-    
-    
 }
