@@ -9,19 +9,33 @@
 /* Begin PBXBuildFile section */
 		FF5775912B6CCE57002CCA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775902B6CCE57002CCA8B /* AppDelegate.swift */; };
 		FF5775932B6CCE57002CCA8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775922B6CCE57002CCA8B /* SceneDelegate.swift */; };
-		FF5775952B6CCE57002CCA8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775942B6CCE57002CCA8B /* ViewController.swift */; };
 		FF57759A2B6CCE59002CCA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5775992B6CCE59002CCA8B /* Assets.xcassets */; };
 		FF57759D2B6CCE59002CCA8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF57759B2B6CCE59002CCA8B /* LaunchScreen.storyboard */; };
+		FF5775A62B6CD29E002CCA8B /* BrithdaysListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775A52B6CD29E002CCA8B /* BrithdaysListView.swift */; };
+		FF5775A82B6CD2BC002CCA8B /* BrithdaysListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775A72B6CD2BC002CCA8B /* BrithdaysListPresenter.swift */; };
+		FF5775AA2B6CD2D1002CCA8B /* BrithdaysListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775A92B6CD2D1002CCA8B /* BrithdaysListRouter.swift */; };
+		FF5775AD2B6CD2FD002CCA8B /* NewInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775AC2B6CD2FD002CCA8B /* NewInfoView.swift */; };
+		FF5775AF2B6CD30F002CCA8B /* NewInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775AE2B6CD30F002CCA8B /* NewInfoPresenter.swift */; };
+		FF5775B12B6CD31E002CCA8B /* NewInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775B02B6CD31E002CCA8B /* NewInfoRouter.swift */; };
+		FF5775B32B6CD3A6002CCA8B /* BrithdaysListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775B22B6CD3A5002CCA8B /* BrithdaysListProtocol.swift */; };
+		FF5775B52B6CD3B5002CCA8B /* NewInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775B42B6CD3B5002CCA8B /* NewInfoProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF57758D2B6CCE57002CCA8B /* BirthdaysList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdaysList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5775902B6CCE57002CCA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF5775922B6CCE57002CCA8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF5775942B6CCE57002CCA8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF5775992B6CCE59002CCA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF57759C2B6CCE59002CCA8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF57759E2B6CCE59002CCA8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF5775A52B6CD29E002CCA8B /* BrithdaysListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrithdaysListView.swift; sourceTree = "<group>"; };
+		FF5775A72B6CD2BC002CCA8B /* BrithdaysListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrithdaysListPresenter.swift; sourceTree = "<group>"; };
+		FF5775A92B6CD2D1002CCA8B /* BrithdaysListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrithdaysListRouter.swift; sourceTree = "<group>"; };
+		FF5775AC2B6CD2FD002CCA8B /* NewInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoView.swift; sourceTree = "<group>"; };
+		FF5775AE2B6CD30F002CCA8B /* NewInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoPresenter.swift; sourceTree = "<group>"; };
+		FF5775B02B6CD31E002CCA8B /* NewInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoRouter.swift; sourceTree = "<group>"; };
+		FF5775B22B6CD3A5002CCA8B /* BrithdaysListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrithdaysListProtocol.swift; sourceTree = "<group>"; };
+		FF5775B42B6CD3B5002CCA8B /* NewInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,37 @@
 		FF57758F2B6CCE57002CCA8B /* BirthdaysList */ = {
 			isa = PBXGroup;
 			children = (
+				FF5775A42B6CD271002CCA8B /* MainView */,
+				FF5775AB2B6CD2D9002CCA8B /* NewInfoView */,
 				FF5775902B6CCE57002CCA8B /* AppDelegate.swift */,
 				FF5775922B6CCE57002CCA8B /* SceneDelegate.swift */,
-				FF5775942B6CCE57002CCA8B /* ViewController.swift */,
 				FF5775992B6CCE59002CCA8B /* Assets.xcassets */,
 				FF57759B2B6CCE59002CCA8B /* LaunchScreen.storyboard */,
 				FF57759E2B6CCE59002CCA8B /* Info.plist */,
 			);
 			path = BirthdaysList;
+			sourceTree = "<group>";
+		};
+		FF5775A42B6CD271002CCA8B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				FF5775A52B6CD29E002CCA8B /* BrithdaysListView.swift */,
+				FF5775A72B6CD2BC002CCA8B /* BrithdaysListPresenter.swift */,
+				FF5775A92B6CD2D1002CCA8B /* BrithdaysListRouter.swift */,
+				FF5775B22B6CD3A5002CCA8B /* BrithdaysListProtocol.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		FF5775AB2B6CD2D9002CCA8B /* NewInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				FF5775AC2B6CD2FD002CCA8B /* NewInfoView.swift */,
+				FF5775AE2B6CD30F002CCA8B /* NewInfoPresenter.swift */,
+				FF5775B02B6CD31E002CCA8B /* NewInfoRouter.swift */,
+				FF5775B42B6CD3B5002CCA8B /* NewInfoProtocol.swift */,
+			);
+			path = NewInfoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +171,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5775952B6CCE57002CCA8B /* ViewController.swift in Sources */,
+				FF5775AA2B6CD2D1002CCA8B /* BrithdaysListRouter.swift in Sources */,
 				FF5775912B6CCE57002CCA8B /* AppDelegate.swift in Sources */,
+				FF5775A82B6CD2BC002CCA8B /* BrithdaysListPresenter.swift in Sources */,
+				FF5775AF2B6CD30F002CCA8B /* NewInfoPresenter.swift in Sources */,
+				FF5775A62B6CD29E002CCA8B /* BrithdaysListView.swift in Sources */,
+				FF5775B12B6CD31E002CCA8B /* NewInfoRouter.swift in Sources */,
+				FF5775B32B6CD3A6002CCA8B /* BrithdaysListProtocol.swift in Sources */,
 				FF5775932B6CCE57002CCA8B /* SceneDelegate.swift in Sources */,
+				FF5775B52B6CD3B5002CCA8B /* NewInfoProtocol.swift in Sources */,
+				FF5775AD2B6CD2FD002CCA8B /* NewInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
