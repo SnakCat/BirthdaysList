@@ -19,6 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         self.window = window
         window.makeKeyAndVisible()
+        let view = DefaultBrithdaysListView()
+        let presenter = DefaultBrithdaysListPresenter(view: view)
+        view.presenter = presenter
+        window.rootViewController = UINavigationController(rootViewController: view)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

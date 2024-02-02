@@ -8,7 +8,3 @@ protocol BrithdaysListPresenter {
     
 }
 
-//MARK: - rouret protocol
-protocol BrithdaysListInput {
-    
-}

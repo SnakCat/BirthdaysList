@@ -7,8 +7,3 @@ protocol NewInfoView: AnyObject {
 protocol NewInfoPresenter {
     
 }
-
-//MARK: - router protocol
-protocol NewInfoInput {
-    
-}
