@@ -5,8 +5,11 @@ final class DefaultBrithdaysListView: UIViewController {
     //MARK: - propertis
     var presenter: BrithdaysListPresenter!
     private let tableView = UITableView()
-    
-    
+    private var users = [User]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     //MARK: - life cycle
     override func viewDidLoad() {
@@ -41,7 +44,9 @@ final class DefaultBrithdaysListView: UIViewController {
     private func setupUI() {
         title = "Brithdays List"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction(handler: { [ weak self ] _ in
+            self?.presenter.addNewUserTapped()
+        }))
         navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .trash)
         tableView.backgroundColor = .backgroundTableView
     }
@@ -53,7 +58,7 @@ extension DefaultBrithdaysListView: BrithdaysListView {
 }
 extension DefaultBrithdaysListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
