@@ -14,7 +14,9 @@ final class DefaultBrithdaysListPresenter: BrithdaysListPresenter {
     
     //MARK: - methods
     func addNewUserTapped() {
-        let addNewView = DefaultNewInfoView()
-        navigationController.pushViewController(addNewView, animated: true)
+        let view = DefaultNewInfoView()
+        let presenter = DefaultNewInfoPresenter(view: view, navigationController: navigationController)
+        view.presenter = presenter
+        navigationController.pushViewController(view, animated: true)
     }
 }

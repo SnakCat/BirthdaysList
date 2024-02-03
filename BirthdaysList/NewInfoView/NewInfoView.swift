@@ -1,6 +1,7 @@
 import UIKit
 
 final class DefaultNewInfoView: UIViewController {
+    
     //MARK: - propertis
     var presenter: NewInfoPresenter!
     private let titleLeble = UILabel()
@@ -82,6 +83,7 @@ final class DefaultNewInfoView: UIViewController {
             
     }
 }
+
     //MARK: - extension
 extension DefaultNewInfoView: NewInfoView {
     

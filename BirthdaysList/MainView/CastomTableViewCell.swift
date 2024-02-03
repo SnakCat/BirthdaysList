@@ -1,6 +1,7 @@
 import UIKit
 
 final class CastomTableViewCell: UITableViewCell {
+    
     //MARK: - propertis
     private let contenerView = UIView()
     private let nameLabel = UILabel()

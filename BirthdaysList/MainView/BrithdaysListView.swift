@@ -26,7 +26,6 @@ final class DefaultBrithdaysListView: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(CastomTableViewCell.self, forCellReuseIdentifier: "CastomTableViewCell")
-    
     }
     
     //MARK: - constreints
