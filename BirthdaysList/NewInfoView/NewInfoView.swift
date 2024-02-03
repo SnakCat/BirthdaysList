@@ -10,6 +10,7 @@ final class DefaultNewInfoView: UIViewController {
     private let datePicker = UIDatePicker()
     private let dateTextField = UITextField()
     private let saveButton = UIButton()
+    private let dateFormater = DateFormatter()
     
     //MARK: - life cycle
     override func viewDidLoad() {
@@ -52,33 +53,34 @@ final class DefaultNewInfoView: UIViewController {
             saveButton.topAnchor.constraint(equalTo: datePicker.bottomAnchor, constant: 50),
             saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             saveButton.heightAnchor.constraint(equalToConstant: 30),
-            saveButton.widthAnchor.constraint(equalToConstant: 70)
+            saveButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
     
     //MARK: - UI
     private func setupUI() {
         view.backgroundColor = .backgroundTableView
-        title = "New Info"
+        title = NSLocalizedString("New Info", comment: "")
         
-        titleLeble.text = "Enter some information below:"
+        titleLeble.text = NSLocalizedString("Enter info", comment: "")
         titleLeble.textAlignment = .center
         
-        nameTextField.placeholder = "Name"
+        nameTextField.placeholder = NSLocalizedString("Name", comment: "")
         nameTextField.textAlignment = .center
         nameTextField.backgroundColor = .white
         nameTextField.layer.cornerRadius = 15
         
-        surnameTextField.placeholder = "Surname"
+        surnameTextField.placeholder = NSLocalizedString("Surname", comment: "")
         surnameTextField.textAlignment = .center
         surnameTextField.backgroundColor = .white
         surnameTextField.layer.cornerRadius = 15
         
         datePicker.datePickerMode = .date
         datePicker.preferredDatePickerStyle = .wheels
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
         
         saveButton.backgroundColor = .systemBlue
-        saveButton.setTitle("Save", for: .normal)
+        saveButton.setTitle(NSLocalizedString("Save", comment: ""), for: .normal)
         saveButton.layer.cornerRadius = 15
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
             
@@ -87,6 +89,15 @@ final class DefaultNewInfoView: UIViewController {
     //MARK: - methods
     @objc private func saveButtonTapped() {
         presenter.saveUser(date: dateTextField.text ?? "", name: nameTextField.text ?? "", surname: surnameTextField.text ?? "")
+    }
+    
+    @objc private func datePickerValueChanged() {
+        getDatePicker()
+    }
+    
+    private func getDatePicker() {
+        dateFormater.dateFormat = "dd.MM.yyy"
+        dateTextField.text = dateFormater.string(from: datePicker.date)
     }
 }
 

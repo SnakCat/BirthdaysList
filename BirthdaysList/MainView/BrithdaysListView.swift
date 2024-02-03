@@ -46,7 +46,7 @@ final class DefaultBrithdaysListView: UIViewController {
     
     //MARK: - UI
     private func setupUI() {
-        title = "Brithdays List"
+        title = NSLocalizedString("BrithdaysList", comment: "") 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction(handler: { [ weak self ] _ in
             self?.presenter.addNewUserTapped()
