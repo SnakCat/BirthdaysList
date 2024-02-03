@@ -62,7 +62,8 @@ extension DefaultBrithdaysListView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CastomTableViewCell", for: indexPath) as? CastomTableViewCell {
-            
+            let user = users[indexPath.row]
+            cell.configure(user: user)
             return cell
         }
         return UITableViewCell()

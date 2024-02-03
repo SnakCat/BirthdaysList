@@ -20,6 +20,14 @@ final class CastomTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - configure
+    func configure(user: User) {
+        nameLabel.text = user.name
+        surnameLable.text = user.surname
+        dateLable.text = user.date
+    }
+    
+    
     //MARK: - constreints
     private func setupConstreints() {
         contenerView.translatesAutoresizingMaskIntoConstraints = false

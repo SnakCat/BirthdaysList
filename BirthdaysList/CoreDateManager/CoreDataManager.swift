@@ -33,6 +33,7 @@ final class CoreDataManager {
             return .failure(.error("Cloud not save \(error)"))
         }
     }
+    
     //MARK: - load method
     func loadUser() -> Result<[User], CoreDataError> {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {

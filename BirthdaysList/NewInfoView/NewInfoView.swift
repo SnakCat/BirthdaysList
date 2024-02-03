@@ -80,7 +80,13 @@ final class DefaultNewInfoView: UIViewController {
         saveButton.backgroundColor = .systemBlue
         saveButton.setTitle("Save", for: .normal)
         saveButton.layer.cornerRadius = 15
+        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
             
+    }
+    
+    //MARK: - methods
+    @objc private func saveButtonTapped() {
+        presenter.saveUser(date: dateTextField.text ?? "", name: nameTextField.text ?? "", surname: surnameTextField.text ?? "")
     }
 }
 
