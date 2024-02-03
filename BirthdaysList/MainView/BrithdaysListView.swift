@@ -3,7 +3,7 @@ import UIKit
 final class DefaultBrithdaysListView: UIViewController {
     
     //MARK: - propertis
-    var presenter: BrithdaysListPresenter!
+    var presenter: BrithdaysListPresenter?
     private let tableView = UITableView()
     var users = [User]() {
         didSet {
@@ -21,7 +21,7 @@ final class DefaultBrithdaysListView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.loadUsers()
+        presenter?.loadUsers()
     }
     
     //MARK: - configure TableView
@@ -49,7 +49,7 @@ final class DefaultBrithdaysListView: UIViewController {
         title = NSLocalizedString("BrithdaysList", comment: "") 
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .add, primaryAction: UIAction(handler: { [ weak self ] _ in
-            self?.presenter.addNewUserTapped()
+            self?.presenter?.addNewUserTapped()
         }))
         navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .trash)
         tableView.backgroundColor = .backgroundTableView
@@ -85,7 +85,7 @@ extension DefaultBrithdaysListView: UITableViewDelegate, UITableViewDataSource {
             alertDelete.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: ""), style: .default, handler: nil))
             alertDelete.addAction(UIAlertAction(title: NSLocalizedString("Delete", comment: ""), style: .destructive, handler: { _ in
                 _ = CoreDataManager.instance.deleteUser(user)
-                self.presenter.loadUsers()
+                self.presenter?.loadUsers()
             }))
             present(alertDelete, animated: true)
         }

@@ -3,7 +3,7 @@ import UIKit
 final class DefaultNewInfoPresenter: NewInfoPresenter {
   
     //MARK: - propertis
-    unowned let view: NewInfoView
+    private unowned let view: NewInfoView
     private let navigationController: UINavigationController
     
     //MARK: - init

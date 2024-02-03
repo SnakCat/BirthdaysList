@@ -3,7 +3,7 @@ import UIKit
 final class DefaultBrithdaysListPresenter: BrithdaysListPresenter {
   
     //MARK: - propertis
-    unowned var view: BrithdaysListView
+    private unowned let view: BrithdaysListView
     private let navigationController: UINavigationController
     
     //MARK: - init

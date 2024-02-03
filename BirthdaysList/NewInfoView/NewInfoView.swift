@@ -3,7 +3,7 @@ import UIKit
 final class DefaultNewInfoView: UIViewController {
     
     //MARK: - propertis
-    var presenter: NewInfoPresenter!
+    var presenter: NewInfoPresenter?
     private let titleLeble = UILabel()
     private let nameTextField = UITextField()
     private let surnameTextField = UITextField()
@@ -88,7 +88,7 @@ final class DefaultNewInfoView: UIViewController {
     
     //MARK: - methods
     @objc private func saveButtonTapped() {
-        presenter.saveUser(date: dateTextField.text ?? "", name: nameTextField.text ?? "", surname: surnameTextField.text ?? "")
+        presenter?.saveUser(date: dateTextField.text ?? "", name: nameTextField.text ?? "", surname: surnameTextField.text ?? "")
     }
     
     @objc private func datePickerValueChanged() {
