@@ -5,7 +5,7 @@ final class DefaultBrithdaysListView: UIViewController {
     //MARK: - propertis
     var presenter: BrithdaysListPresenter!
     private let tableView = UITableView()
-    private var users = [User]() {
+    var users = [User]() {
         didSet {
             tableView.reloadData()
         }
@@ -17,6 +17,11 @@ final class DefaultBrithdaysListView: UIViewController {
         configTableView()
         setupConstreints()
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.loadUsers()
     }
     
     //MARK: - configure TableView
@@ -54,6 +59,10 @@ final class DefaultBrithdaysListView: UIViewController {
     //MARK: - extension + tableView
 extension DefaultBrithdaysListView: BrithdaysListView {
     
+    func updateUser(_ user: [User]) {
+        users = user
+    }
+    
 }
 extension DefaultBrithdaysListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,5 +76,18 @@ extension DefaultBrithdaysListView: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        if editingStyle == .delete {
+            let alertDelete = UIAlertController(title: NSLocalizedString("Delete", comment: ""), message: NSLocalizedString("Delete user", comment: ""), preferredStyle: .alert)
+            alertDelete.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: ""), style: .default, handler: nil))
+            alertDelete.addAction(UIAlertAction(title: NSLocalizedString("Delete", comment: ""), style: .destructive, handler: { _ in
+                _ = CoreDataManager.instance.deleteUser(user)
+                self.presenter.loadUsers()
+            }))
+            present(alertDelete, animated: true)
+        }
     }
 }

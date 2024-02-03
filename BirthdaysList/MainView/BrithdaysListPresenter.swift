@@ -1,9 +1,9 @@
 import UIKit
 
 final class DefaultBrithdaysListPresenter: BrithdaysListPresenter {
-
+  
     //MARK: - propertis
-    unowned let view: BrithdaysListView
+    unowned var view: BrithdaysListView
     private let navigationController: UINavigationController
     
     //MARK: - init
@@ -18,5 +18,15 @@ final class DefaultBrithdaysListPresenter: BrithdaysListPresenter {
         let presenter = DefaultNewInfoPresenter(view: view, navigationController: navigationController)
         view.presenter = presenter
         navigationController.pushViewController(view, animated: true)
+    }
+    
+    func loadUsers() {
+        let operationResult = CoreDataManager.instance.loadUser()
+        switch operationResult {
+        case .success(let users):
+            view.updateUser(users)
+        case .failure(let failure):
+            print(failure)
+        }
     }
 }
