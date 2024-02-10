@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0DC86D2B72DFA800BD4A1A /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0DC86C2B72DFA800BD4A1A /* NotificationManager.swift */; };
 		FF1F901E2B6E6EC200B86EEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF1F90202B6E6EC200B86EEA /* Localizable.strings */; };
 		FF5775912B6CCE57002CCA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775902B6CCE57002CCA8B /* AppDelegate.swift */; };
 		FF5775932B6CCE57002CCA8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5775922B6CCE57002CCA8B /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF0DC86C2B72DFA800BD4A1A /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		FF1F901D2B6E6EB600B86EEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FF1F901F2B6E6EC200B86EEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF1F90212B6E6EC400B86EEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				FF57759E2B6CCE59002CCA8B /* Info.plist */,
 				FF5775B62B6CE78B002CCA8B /* BirthdaysList.xcdatamodeld */,
 				FF1F90202B6E6EC200B86EEA /* Localizable.strings */,
+				FF0DC86C2B72DFA800BD4A1A /* NotificationManager.swift */,
 			);
 			path = BirthdaysList;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				FF5775A62B6CD29E002CCA8B /* BrithdaysListView.swift in Sources */,
 				FF5775BB2B6CE93B002CCA8B /* CoreDataManager.swift in Sources */,
 				FF5775B32B6CD3A6002CCA8B /* BrithdaysListProtocol.swift in Sources */,
+				FF0DC86D2B72DFA800BD4A1A /* NotificationManager.swift in Sources */,
 				FF5775C02B6D186C002CCA8B /* Extension + UIView.swift in Sources */,
 				FF5775932B6CCE57002CCA8B /* SceneDelegate.swift in Sources */,
 				FF5775B52B6CD3B5002CCA8B /* NewInfoProtocol.swift in Sources */,
