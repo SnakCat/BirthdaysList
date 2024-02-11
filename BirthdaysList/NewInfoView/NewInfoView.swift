@@ -88,7 +88,7 @@ final class DefaultNewInfoView: UIViewController {
     
     //MARK: - methods
     @objc private func saveButtonTapped() {
-        presenter?.saveUser(date: dateTextField.text ?? "", name: nameTextField.text ?? "", surname: surnameTextField.text ?? "")
+        presenter?.saveUsers(date: dateTextField.text ?? "", name: nameTextField.text ?? "", surname: surnameTextField.text ?? "")
     }
     
     @objc private func datePickerValueChanged() {

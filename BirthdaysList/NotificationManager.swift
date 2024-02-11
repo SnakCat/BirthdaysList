@@ -47,6 +47,7 @@ final class NotificationManager {
     }
     
 }
+
     //MARK: - extension coping
 extension NotificationManager: NSCopying {
     func copy(with zone: NSZone? = nil) -> Any {
