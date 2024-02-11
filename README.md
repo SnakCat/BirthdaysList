@@ -19,3 +19,6 @@ Name
 Surname
 Birthday date
 Notification
+
+![image alt](https://github.com/SnakCat/BirthdaysList/blob/main/main.png)
+![image alt](https://github.com/SnakCat/BirthdaysList/blob/main/add.png)
